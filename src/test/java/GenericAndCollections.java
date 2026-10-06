@@ -5,27 +5,34 @@ public class GenericAndCollections {
 
     public void main(){
 
+        String text = "Det här var inte lätt. Hej vad det går.";
 
-        List<String> lista = new ArrayList();
+        Set <String> resultat = stringParameter(text);
 
-        lista.add("Goodmorning");
-        lista.add("Goodday");
-        lista.add("Goodnight");
-
-        IO.println(lista);
-
-        //List<String> test = reverse(lista); Alternative lösning.
-
-        IO.println(reverse(lista));
-
-
-    }
-    private List<String> reverse(List<String> a) {
-
-      return a.reversed();
+        IO.println(resultat);
 
 
     }
 
+    static Set<String> stringParameter(String a){
 
+        Set<String> ord = new HashSet<>();
+        /* Här kapas ett Set som heter ord.
+        - Set<String> = typen: ett Set som innehåller String
+        - ord = variabeln som refererar till Setet
+        - new HashSet<>() = själva HashSet-objektet skapas. */
+
+        String[] delar = a.split(" ");
+        //Här delas texten i a upp vid varje mellanslag.
+
+
+
+
+        for (String del : delar) {
+            ord.add(del);
+            //Här går for-loopen igenom arrayen delar, ett ord i taget.
+        }
+
+        return ord;
+    }
 }
