@@ -5,18 +5,25 @@ public class GenericAndCollections {
 
     public void main(){
 
-        String[] text = {"Hello", "Goodbye", "Evening"};
-    convertToList(text);
 
-    IO.println(Arrays.toString(text));
+        List<String> lista = new ArrayList();
 
-    IO.println(Arrays.asList(text));
+        lista.add("Goodmorning");
+        lista.add("Goodday");
+        lista.add("Goodnight");
+
+        IO.println(lista);
+
+        List<String> test = reverse(lista);
+
+        IO.println(test);
 
 
     }
+    private List<String> reverse(List<String> a) {
 
-    private List convertToList(String[] a) {
-        return Arrays.asList(a);
+      return a.reversed();
+
 
     }
 
