@@ -14,9 +14,9 @@ public class GenericAndCollections {
 
         IO.println(lista);
 
-        List<String> test = reverse(lista);
+        //List<String> test = reverse(lista); Alternative lösning.
 
-        IO.println(test);
+        IO.println(reverse(lista));
 
 
     }
